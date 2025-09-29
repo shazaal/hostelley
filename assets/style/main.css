@@ -1,0 +1,317 @@
+ *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+ }
+ body {
+     background-color: #f8f9fa;
+     overflow-y: hidden;
+
+ }
+
+ .sidebar {
+     height: 100vh;
+     background: #343a40;
+     color: white;
+     padding: 20px;
+ }
+
+ .sidebar h4 {
+     color: #f8f9fa;
+ }
+
+ .filter-bar select {
+     min-width: 150px;
+ }
+
+
+
+ /* Base Reset */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .menu {
+     position: relative;
+     right: 440px;
+     font-size: 2rem;
+     color: white;
+ }
+.none{
+    list-style-type: none;
+}
+
+ body {
+     background: #f4f6f9;
+     color: #333;
+     transition: background 0.3s, color 0.3s;
+ }
+
+ h4 {
+     color: #333;
+ }
+
+ /* Navbar */
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem 2rem;
+     background: #2c3e50;
+     color: white;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ .navbar h1 {
+     font-size: 1.5rem;
+     font-weight: bold;
+ }
+ filter{
+    background-color:  #f5f6fa;
+ }
+
+ /* Dropdown */
+ .dropdown {
+     position: relative;
+     display: inline-block;
+ }
+
+ .dropbtn {
+     background: #34495e;
+     color: white;
+     padding: 0.6rem 1rem;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     font-size: 1rem;
+ }
+
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     right: 0;
+     background: white;
+     min-width: 180px;
+     border-radius: 6px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     z-index: 1;
+ }
+
+ .dropdown-content a,
+ .dropdown-content button {
+     color: #333;
+     padding: 0.8rem 1rem;
+     text-decoration: none;
+     display: block;
+     background: white;
+     border: none;
+     width: 100%;
+     text-align: left;
+     cursor: pointer;
+     font-size: 0.95rem;
+ }
+
+ .dropdown-content a:hover,
+ .dropdown-content button:hover {
+     background: #f1f1f1;
+ }
+
+ .dropdown:hover .dropdown-content {
+     display: block;
+ }
+
+ /* Cards */
+ .dashboard {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+     padding: 2rem;
+ }
+
+ .card {
+     background: white;
+     padding: 2rem;
+     border-radius: 12px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     transition: transform 0.2s;
+ }
+
+ .card:hover {
+     transform: translateY(-5px);
+ }
+
+ .card h2 {
+     font-size: 2rem;
+     margin-bottom: 0.5rem;
+     color: #2c3e50;
+ }
+
+ .card p {
+     font-size: 1rem;
+     color: #666;
+ }
+
+ /* Dark Mode */
+ body.dark-mode {
+     background: #0f172a;
+     color: #000000;
+ }
+
+ body.dark-mode .navbar {
+     background: #111;
+ }
+
+ body.dark-mode .dropbtn {
+     background: #222;
+ }
+
+ body.dark-mode .dropdown-content {
+     background: #222;
+ }
+
+ body.dark-mode .dropdown-content a,
+ body.dark-mode .dropdown-content button {
+     color: #f4f6f9;
+     background: #222;
+ }
+
+ body.dark-mode .dropdown-content a:hover,
+ body.dark-mode .dropdown-content button:hover {
+     background: #333;
+ }
+ body.dark-mode .filter{
+        background: #1e1e2f;
+        color: #f8fafc;
+ }
+
+ body.dark-mode .card {
+     background: #1e1e2f;
+     color: #f4f6f9;
+ }
+
+ body.dark-mode h4 {
+     color: white;
+ }
+ body.dark-mode .slide-left{
+    background-color: #1e293b;
+    color: #f8fafc;
+ }
+
+ .switch {
+     position: relative;
+     display: inline-block;
+     right: 1%;
+     width: 50px;
+     height: 24px;
+ }
+
+ .switch input {
+     opacity: 0;
+     width: 0;
+     height: 0;
+ }
+
+ .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #ccc;
+     transition: 0.4s;
+     border-radius: 24px;
+ }
+
+ .slider:before {
+     position: absolute;
+     content: "☀️";
+     height: 20px;
+     width: 20px;
+     left: 2px;
+     bottom: 2px;
+     background-color: white;
+     border-radius: 50%;
+     transition: 0.4s;
+     text-align: center;
+     line-height: 20px;
+     font-size: 14px;
+ }
+
+ input:checked+.slider {
+     background-color: #666;
+ }
+
+ input:checked+.slider:before {
+     transform: translateX(26px);
+     content: "🌙";
+ }
+ .cols-col{
+    display: none;
+ }
+  .cols-header .bi {
+    transition: transform 0.3s ease;
+  }
+  .cols-header.active .bi {
+    transform: rotate(90deg); 
+  }
+.filter {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12), 
+              0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.filter:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18), 
+              0 4px 10px rgba(0, 0, 0, 0.12);
+}
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  margin: 10% auto;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close button */
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.btn {
+  margin-top: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9);}
+  to { opacity: 1; transform: scale(1);}
+}
